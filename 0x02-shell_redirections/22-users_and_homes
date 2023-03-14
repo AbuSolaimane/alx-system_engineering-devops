@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "Best School" > "\*\\\'\"Best School\"\'\\\*$\?\*\*\*\*\*:)"
+cut -f 1,6 -d : /etc/passwd | sort
