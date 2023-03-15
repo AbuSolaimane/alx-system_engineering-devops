@@ -1,2 +1,2 @@
 #!/bin/bash
-printf "%.2f\n" "$NUM"
+tr 'a-zA-Z' 'n-za-mN-ZA-M'
