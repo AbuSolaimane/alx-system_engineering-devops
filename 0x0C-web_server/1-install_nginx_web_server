@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 # install and configure ngnix
 
-sudo apt-get update
-sudo apt-get -y install nginx
+sudo apt -y install nginx
 mkdir -p /var/www/html
 chmod -R 755 /var/www
 echo "Hello World!" > /var/www/html/index.html
