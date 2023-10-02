@@ -6,7 +6,13 @@ apt-get install -y software-properties-common
 add-apt-repository -y ppa:vbernat/haproxy-1.7
 apt-get update
 apt-get install haproxy=1.7.\* -y
-echo "frontend web-front
+echo "defaults
+  mode http
+  timeout client 15s
+  timeout connect 10s
+  timeout server 15s
+  timeout http-request 10s
+frontend web-front
         bind *:80
         default_backend web-backend
 
