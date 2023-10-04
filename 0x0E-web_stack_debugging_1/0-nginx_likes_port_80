@@ -2,5 +2,5 @@
 # troubleshout the issue of ngnix
 new_string="listen 80"
 old_string="listen 8080"
-sudo sed -i "s/$old_string/$new_string/" /etc/nginx/sites-enabled/default
+sudo sed -i "s/$old_string/$new_string/g" /etc/nginx/sites-enabled/default
 sudo service nginx restart
