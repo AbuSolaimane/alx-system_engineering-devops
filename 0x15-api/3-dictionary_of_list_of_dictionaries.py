@@ -14,7 +14,7 @@ if __name__ == '__main__':
         employeeId = employee.get('id')
         username = employee.get('username')
 
-        todosUrl = employeesUrl + "/" + employeeId + "/todos"
+        todosUrl = employeesUrl + "/{}".format(employeeId) + "/todos"
         tasks = requests.get(todosUrl).json()
         employees_tasks[employeeId] = []
         for task in tasks:
