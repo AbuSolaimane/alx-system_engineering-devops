@@ -7,7 +7,7 @@ import requests
 
 if __name__ == '__main__':
     employeesUrl = "https://jsonplaceholder.typicode.com/users"
-    employees = requests.get(employeeUrl).json()
+    employees = requests.get(employeesUrl).json()
 
     employees_tasks = {}
     for employee in employees:
@@ -25,4 +25,4 @@ if __name__ == '__main__':
             })
 
     with open('todo_all_employees.json', 'w') as file:
-                json.dump(employees_tasks, file)
+        json.dump(employees_tasks, file)
