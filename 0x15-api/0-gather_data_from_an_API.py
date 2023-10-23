@@ -6,14 +6,13 @@ import sys
 
 
 if __name__ == '__main__':
-    employeeId = sys.argv[1]
-    employeeUrl = "https://jsonplaceholder.typicode.com/users/" + employeeId
+    employeeUrl = "https://jsonplaceholder.typicode.com/users/" + sys.argv[1]
 
     employee = requests.get(employeeUrl).json()
     employeeName = employee.get('name')
 
     todosUrl = employeeUrl + "/todos"
-    tasks = requests.get().json()
+    tasks = requests.get(todosUrl).json()
     done_tasks = []
 
     for task in tasks:
