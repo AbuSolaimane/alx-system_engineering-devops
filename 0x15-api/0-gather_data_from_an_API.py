@@ -14,10 +14,12 @@ if __name__ == '__main__':
     todosUrl = employeeUrl + "/todos"
     tasks = requests.get(todosUrl).json()
     done_tasks = []
+    done = 0
 
     for task in tasks:
         if task.get('completed'):
             done_tasks.append(task)
+            done += 1
 
     print("Employee {} is done with tasks({}/{}):"
           .format(employeeName, done, len(tasks)))
