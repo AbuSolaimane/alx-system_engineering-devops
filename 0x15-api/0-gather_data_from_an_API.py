@@ -7,7 +7,6 @@ import sys
 
 if __name__ == '__main__':
     employeeUrl = "https://jsonplaceholder.typicode.com/users/" + sys.argv[1]
-
     employee = requests.get(employeeUrl).json()
     employeeName = employee.get('name')
 
