@@ -1,7 +1,7 @@
 # a puppet script
-$fileToEdit = '/var/www/html/wp-settings.php'
+$file_edit = '/var/www/html/wp-settings.php'
 
 exec { 'replace_line':
-  command => "sed -i 's/phpp/php/g' ${fileToEdit}",
+  command => "sed -i 's/phpp/php/g' ${file_edit}",
   path    => ['/bin','/usr/bin']
 }
